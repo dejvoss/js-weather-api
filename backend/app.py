@@ -20,8 +20,6 @@ def proxy():
     lat = request.args.get('lat')
     lon = request.args.get('lon')
 
-    separator = '+' if float(lon) >= 0 else '-'
-
     # get city name from geo api
     geo_url = "https://opencage-geocoder.p.rapidapi.com/geocode/v1/json"
     geo_querystring = {
