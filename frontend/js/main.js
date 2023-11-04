@@ -14,7 +14,7 @@ function loadSite() {
 }
 
 function getFromProxy() {
-  const url = `http://127.0.0.1:5000/proxy?lat=${latitude}&lon=${longitude}`
+  const url = `https://papiproxy-73f36d0981ee.herokuapp.com/proxy?lat=${latitude}&lon=${longitude}`
   fetch(url)
       .then(response => {
         if (!response.ok) {
