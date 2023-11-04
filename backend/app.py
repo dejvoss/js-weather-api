@@ -36,7 +36,7 @@ def proxy():
     location_info = geo_response.json()['results'][0]['components']
     city_name = location_info['town'] if 'town' in location_info else location_info['_category']
     country = location_info['country'] if 'country' in location_info else location_info['_type']
-    region = location_info['state'] if 'state' in location_info else location_info['formatted']
+    region = location_info['state'] if 'state' in location_info else geo_response.json()['results'][0]['formatted']
 
     # get weather info from weather api
     weather_url = "https://weather-by-api-ninjas.p.rapidapi.com/v1/weather"
